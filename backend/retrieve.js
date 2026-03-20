@@ -8,7 +8,7 @@
 
 const { createClient } = require('@supabase/supabase-js');
 
-const MATCH_THRESHOLD = 0.5;
+const MATCH_THRESHOLD = 0.4;
 const MATCH_COUNT = 5;
 
 const supabase = createClient(
