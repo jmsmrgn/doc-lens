@@ -5,3 +5,7 @@ scraped_docs/
 .DS_Store
 *.local
 .claude/
+*.pdf
+deck/render-*.jpg
+deck/slide-*.jpg
+deck/unpacked/
