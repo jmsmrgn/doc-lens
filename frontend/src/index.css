@@ -1,0 +1,62 @@
+/* -------------------------------------------------------------------------
+   Global reset and design tokens
+   ------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Backgrounds */
+  --bg:             #0e1117;
+  --surface:        #141922;
+  --surface-raised: #1c2333;
+  --border:         #252d40;
+  --border-subtle:  #1a2235;
+
+  /* Text */
+  --text-primary:   #dde3f0;
+  --text-secondary: #7a8aaa;
+  --text-muted:     #3d4d66;
+
+  /* Accent — RAG panel */
+  --rag:            #2dd4bf;
+  --rag-dim:        rgba(45, 212, 191, 0.10);
+  --rag-glow:       rgba(45, 212, 191, 0.18);
+
+  /* Typography */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
