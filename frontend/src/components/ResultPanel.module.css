@@ -77,7 +77,42 @@
   font-size: 16px;
   line-height: 1.72;
   color: var(--text-primary);
-  white-space: pre-wrap;
+}
+
+.answer p {
+  margin-bottom: 0.75em;
+}
+
+.answer p:last-child {
+  margin-bottom: 0;
+}
+
+.answer ol,
+.answer ul {
+  padding-left: 1.4em;
+  margin-bottom: 0.75em;
+}
+
+.answer li {
+  margin-bottom: 0.25em;
+}
+
+.answer li:last-child {
+  margin-bottom: 0;
+}
+
+.answer h1,
+.answer h2,
+.answer h3,
+.answer h4 {
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.answer strong {
+  font-weight: 600;
 }
 
 .noChunks {
