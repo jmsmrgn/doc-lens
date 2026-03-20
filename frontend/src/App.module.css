@@ -16,8 +16,8 @@
 .wordmark {
   font-family: var(--font-display);
   font-size: 3rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.015em;
   color: var(--text-primary);
   line-height: 1;
   margin-bottom: 0.6rem;
@@ -38,7 +38,7 @@
 
 .main {
   width: 100%;
-  max-width: 960px;
+  max-width: 1180px;
 }
 
 /* ---- Controls row ---- */

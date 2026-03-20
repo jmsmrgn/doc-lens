@@ -74,7 +74,7 @@
 }
 
 .answer {
-  font-size: 0.9375rem;
+  font-size: 16px;
   line-height: 1.72;
   color: var(--text-primary);
   white-space: pre-wrap;
@@ -202,19 +202,29 @@ a.chunkSource:hover {
   animation: shimmer 1.4s ease-in-out infinite;
 }
 
-.skLong  { width: 100%; }
-.skMed   { width: 72%; }
-.skShort { width: 48%; }
+.skLong {
+  width: 100%;
+}
+.skMed {
+  width: 72%;
+}
+.skShort {
+  width: 48%;
+}
 
 .inlineCode {
   background: var(--border);
   border-radius: 3px;
   padding: 0.1em 0.35em;
   font-size: 0.85em;
-  font-family: 'Fira Code', 'Cascadia Code', 'Menlo', monospace;
+  font-family: "Fira Code", "Cascadia Code", "Menlo", monospace;
 }
 
 @keyframes shimmer {
-  0%   { background-position: -600px 0; }
-  100% { background-position:  600px 0; }
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 600px 0;
+  }
 }
