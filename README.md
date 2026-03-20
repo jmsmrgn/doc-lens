@@ -1,6 +1,6 @@
 # doc-lens
 
-doc-lens is a working RAG (Retrieval-Augmented Generation — a technique where an LLM is given relevant document passages at query time instead of relying on training data alone) system built over Transcend's public documentation. It scrapes and indexes the docs into a vector database (a database that stores meaning as numbers so semantically similar content is physically close together), retrieves the most relevant passages on each query, and injects them into the prompt before generating an answer. A toggle runs the same question through both paths — RAG on and RAG off — so you can see the difference directly.
+doc-lens is a working RAG (Retrieval-Augmented Generation — a technique where an LLM is given relevant document passages at query time instead of relying on training data alone) system. Point it at any documentation corpus: scrape and index the docs into a vector database (a database that stores meaning as numbers so semantically similar content is physically close together), and it retrieves the most relevant passages on each query and injects them into the prompt before generating an answer. A toggle runs the same question through both paths — RAG on and RAG off — so you can see the difference directly.
 
 ## Architecture
 
@@ -8,7 +8,7 @@ Two phases: prep runs once, query runs on every request.
 
 **Prep phase — index the docs:**
 ```
-Transcend Docs → Firecrawl → Chunker → OpenAI Embeddings → Supabase pgvector
+Your Docs → Firecrawl → Chunker → OpenAI Embeddings → Supabase pgvector
 ```
 
 **Query phase — answer a question:**
@@ -83,7 +83,7 @@ Runs both backend and frontend concurrently from the repo root. Backend starts o
 
 Submit a question and three panels populate.
 
-**RAG OFF** — The query goes directly to gpt-4o-mini with no context. The model answers from its training data, which doesn't include Transcend's internal documentation. For specific questions — exact parameter names, config values, feature-specific behavior — the answer is a confident-sounding guess.
+**RAG OFF** — The query goes directly to gpt-4o-mini with no context. The model answers from its training data alone. For specific questions — exact parameter names, config values, feature-specific behavior — the answer is a confident-sounding guess.
 
 **RAG ON** — The query is first converted to an embedding (a numerical representation of its meaning), used to search Supabase for the five most semantically similar chunks from the docs, and those chunks are injected into the system prompt before generation. The model reads the actual documentation and answers from it.
 
